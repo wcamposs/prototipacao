@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title padding center text-center>Nome do App</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Usuário</ion-label>
+      <ion-input [(ngModel)]="user.email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>  
+  </ion-list>
+
+  <button ion-button full (click)="login(user)">Entrar</button>
+
+  <button ion-button full color="light" (click)="goRegister()">Não possui uma conta? Cadastre-se</button>
+
+</ion-content>

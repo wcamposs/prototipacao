@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastre-se</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Usuário</ion-label>
+      <ion-input [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Confirme sua Senha</ion-label>
+      <ion-input [(ngModel)]="user.repassword" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="register(user)">Criar Conta</button>
+
+</ion-content>
