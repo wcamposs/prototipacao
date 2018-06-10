@@ -16,7 +16,7 @@ export class RegisterPage {
   user = {} as user;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private appauth: AngularFireAuth) {
   }
