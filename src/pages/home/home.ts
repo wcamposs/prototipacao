@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
+import { HTTP } from '@ionic-native/http';
 import { NavController, NavParams } from 'ionic-angular';
 
 export class NavigationDetailsPage {
   item;
 
-  constructor(params: NavParams) {
+  constructor(params: NavParams, public http: HTTP) {
     if (params.data.item.id == 'estados') {
       this.http.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados', {}, {})
-  .then(data => {
+      .then(data => {
+        console.log(data.status);
+        console.log(data.data); // data received by server
+        console.log(data.headers);
 
-    console.log(data.status);
-    console.log(data.data); // data received by server
-    console.log(data.headers);
-
-  })
+      })
   .catch(error => {
+        console.log(error.status);
+        console.log(error.error); // error message as string
+        console.log(error.headers);
 
-    console.log(error.status);
-    console.log(error.error); // error message as string
-    console.log(error.headers);
-
-  });
+      });
     }
     this.item = params.data.item;
   }
@@ -29,6 +28,7 @@ export class NavigationDetailsPage {
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
+  entryComponents: [ HTTP ]
 })
 
 export class HomePage {
