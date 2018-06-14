@@ -1,7 +1,5 @@
-import { AlertController } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { IonicPage, NavController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoginPage } from '../login/login';
 import { user } from '../../models/user';
@@ -17,7 +15,6 @@ export class RegisterPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
     private appauth: AngularFireAuth) {
   }
 

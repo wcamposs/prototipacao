@@ -1,77 +1,54 @@
 import { Component } from '@angular/core';
-import { HTTP } from '@ionic-native/http';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import {EstadosPage} from "../estados/estados";
 
-export class NavigationDetailsPage {
-  item;
-
-  constructor(params: NavParams, public http: HTTP) {
-    if (params.data.item.id == 'estados') {
-      this.http.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados', {}, {})
-      .then(data => {
-        console.log(data.status);
-        console.log(data.data); // data received by server
-        console.log(data.headers);
-
-      })
-  .catch(error => {
-        console.log(error.status);
-        console.log(error.error); // error message as string
-        console.log(error.headers);
-
-      });
-    }
-    this.item = params.data.item;
-  }
-}
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
-  entryComponents: [ HTTP ]
+    selector: 'page-home',
+    templateUrl: 'home.html',
 })
 
 export class HomePage {
 
-  items = [];
+    items = [];
 
-  constructor(public nav: NavController) {
-    this.items = [
-      {
-        'id': 'uf',
-        'title': 'Estado',
-        'icon': 'arrow-forward',
-        'description': 'Encontre projeções para cada estado',
-        'color': '#000000'
-      },{
-        'id': 'regioes',
-        'title': 'Regiões',
-        'icon': 'arrow-forward',
-        'description': 'Encontre projeções para cada região',
-        'color': '#000000'
-      },
-      {
-        'id': 'mesorregioes',
-        'title': 'Mesorregiões',
-        'icon': 'arrow-forward',
-        'description': 'Encontre projeções para cada mesoregião',
-        'color': '#000000'
-      },
-      {
-        'id': 'microrregioes',
-        'title': 'Microrregião',
-        'icon': 'arrow-forward',
-        'description': 'Encontre projeções para cada microrregião',
-        'color': '#000000'
-      },
-    ]
-  }
+    constructor(public nav: NavController) {
+        this.items = [
+            {
+                'id': 'uf',
+                'title': 'Estado',
+                'icon': 'arrow-forward',
+                'description': 'Encontre projeções para cada estado',
+                'color': '#000000'
+            },{
+                'id': 'regioes',
+                'title': 'Regiões',
+                'icon': 'arrow-forward',
+                'description': 'Encontre projeções para cada região',
+                'color': '#000000'
+            },
+            {
+                'id': 'mesorregioes',
+                'title': 'Mesorregiões',
+                'icon': 'arrow-forward',
+                'description': 'Encontre projeções para cada mesoregião',
+                'color': '#000000'
+            },
+            {
+                'id': 'microrregioes',
+                'title': 'Microrregião',
+                'icon': 'arrow-forward',
+                'description': 'Encontre projeções para cada microrregião',
+                'color': '#000000'
+            },
+        ]
+    }
 
-  openNavDetailsPage(item) {
-    this.nav.push(NavigationDetailsPage, { item: item });
-  }
+    openNavDetailsPage(item) {
+        this.nav.push(EstadosPage, { item: item });
+    }
 
-  ionViewDidLoad() {
+    ionViewDidLoad() {
 
-  }
+    }
 }

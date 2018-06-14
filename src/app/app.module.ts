@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage, NavigationDetailsPage} from '../pages/home/home';
+import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
@@ -17,7 +17,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {Http} from "@angular/http";
+import {EstadosPage} from "../pages/estados/estados";
 
 
 @NgModule({
@@ -29,13 +29,11 @@ import {Http} from "@angular/http";
     RegisterPage,
     TabsPage,
     LoginPage,
-    NavigationDetailsPage,
-
+    EstadosPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
@@ -51,7 +49,7 @@ import {Http} from "@angular/http";
     RegisterPage,
     TabsPage,
     LoginPage,
-    NavigationDetailsPage,
+    EstadosPage,
   ],
   providers: [
     StatusBar,
