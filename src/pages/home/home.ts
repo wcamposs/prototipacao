@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {EstadosPage} from "../estados/estados";
+import { EstadosPage } from "../estados/estados";
 
 
 @Component({

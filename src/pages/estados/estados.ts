@@ -10,27 +10,29 @@ import {HTTP} from "@ionic-native/http";
 })
 
 export class EstadosPage {
-    items = [];
+    estados = [];
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: HTTP) {
         this.http.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados', {}, {})
-            .then(result => {
-                let response_data = JSON.parse(result.data);
-                for (let estado of response_data){
-                    console.log(estado);
-                    this.items.push(estado);
-                }
-            })
-            .catch(error => {
-                console.log(error.status);
-                console.log(error.error); // error message as string
-                console.log(error.headers);
+        .then(result => {
+            let response_data = JSON.parse(result.data);
+            for (let estado of response_data){
+                this.estados.push(estado);
+            }
+        })
+        .catch(error => {
+            console.log(error.status);
+            console.log(error.error); // error message as string
+            console.log(error.headers);
+        });
+    }
 
-            });
-        // this.item = navParams.data.item;
+    openEstado(estado) {
+        console.log(estado);
     }
 
     ionViewDidLoad() {
-        console.log(this.items);
+        
+        console.log(this.estados);
     }
 
 }
