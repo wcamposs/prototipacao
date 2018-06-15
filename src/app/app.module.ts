@@ -17,7 +17,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {EstadosPage} from "../pages/estados/estados";
 
 
 @NgModule({
@@ -29,7 +28,6 @@ import {EstadosPage} from "../pages/estados/estados";
     RegisterPage,
     TabsPage,
     LoginPage,
-    EstadosPage,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +47,6 @@ import {EstadosPage} from "../pages/estados/estados";
     RegisterPage,
     TabsPage,
     LoginPage,
-    EstadosPage,
   ],
   providers: [
     StatusBar,
