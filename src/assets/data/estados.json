@@ -1,0 +1,110 @@
+[
+    {
+        "nome": "Acre",
+        "sigla": "AC"
+    },
+    {
+        "nome": "Alagoas",
+        "sigla": "AL"
+    },
+    {
+        "nome": "Amap\u00e1",
+        "sigla": "AP"
+    },
+    {
+        "nome": "Amazonas",
+        "sigla": "AM"
+    },
+    {
+        "nome": "Bahia",
+        "sigla": "BA"
+    },
+    {
+        "nome": "Cear\u00e1",
+        "sigla": "CE"
+    },
+    {
+        "nome": "Distrito Federal",
+        "sigla": "DF"
+    },
+    {
+        "nome": "Esp\u00edrito Santo",
+        "sigla": "ES"
+    },
+    {
+        "nome": "Goi\u00e1s",
+        "sigla": "GO"
+    },
+    {
+        "nome": "Maranh\u00e3o",
+        "sigla": "MA"
+    },
+    {
+        "nome": "Mato Grosso",
+        "sigla": "MT"
+    },
+    {
+        "nome": "Mato Grosso do Sul",
+        "sigla": "MS"
+    },
+    {
+        "nome": "Minas Gerais",
+        "sigla": "MG"
+    },
+    {
+        "nome": "Par\u00e1",
+        "sigla": "PA"
+    },
+    {
+        "nome": "Para\u00edba",
+        "sigla": "PB"
+    },
+    {
+        "nome": "Paran\u00e1",
+        "sigla": "PR"
+    },
+    {
+        "nome": "Pernambuco",
+        "sigla": "PE"
+    },
+    {
+        "nome": "Piau\u00ed",
+        "sigla": "PI"
+    },
+    {
+        "nome": "Rio de Janeiro",
+        "sigla": "RJ"
+    },
+    {
+        "nome": "Rio Grande do Norte",
+        "sigla": "RN"
+    },
+    {
+        "nome": "Rio Grande do Sul",
+        "sigla": "RS"
+    },
+    {
+        "nome": "Rond\u00f4nia",
+        "sigla": "RO"
+    },
+    {
+        "nome": "Roraima",
+        "sigla": "RR"
+    },
+    {
+        "nome": "Santa Catarina",
+        "sigla": "SC"
+    },
+    {
+        "nome": "S\u00e3o Paulo",
+        "sigla": "SP"
+    },
+    {
+        "nome": "Sergipe",
+        "sigla": "SE"
+    },
+    {
+        "nome": "Tocantins",
+        "sigla": "TO"
+    }
+]
