@@ -66,8 +66,9 @@ export class GraficoPage {
             let populacao_total = [];
             let populacao_homens = [];
             let populacao_mulheres = [];
-
-            for (let info of response) {
+            
+            for (let i in response) {
+                let info = response[i];
                 labels.push(info.ano);
                 populacao_total.push(info.populacao_total);
                 populacao_homens.push(info.homens);
