@@ -17,7 +17,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HttpClientModule } from '@angular/common/http';//import
+import { HttpClientModule } from '@angular/common/http';
+import { GraficoPage } from "../pages/grafico/grafico";
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';//import
         RegisterPage,
         TabsPage,
         LoginPage,
+        GraficoPage,
     ],
     imports: [
         BrowserModule,
@@ -38,7 +41,6 @@ import { HttpClientModule } from '@angular/common/http';//import
         AngularFireDatabaseModule,
         AngularFireModule,
         HttpClientModule,
-
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -49,11 +51,13 @@ import { HttpClientModule } from '@angular/common/http';//import
         RegisterPage,
         TabsPage,
         LoginPage,
+        GraficoPage,
     ],
     providers: [
         StatusBar,
         SplashScreen,
         HTTP,
+        HttpClientModule,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ]
 })

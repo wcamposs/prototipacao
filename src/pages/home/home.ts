@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-
+import { GraficoPage } from "../grafico/grafico";
 
 
 
@@ -11,17 +11,16 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomePage {
-
-    estados = [];
-
+    estados = null;
     constructor(public nav: NavController, public http: HttpClient) {
         this.http.get('../assets/data/estados.json').subscribe(data =>
         {
             this.estados = data;
         });
     }
-
     openEstadoGraficos(estado) {
-        console.log(estado);
+        this.nav.push(GraficoPage, {
+            estado: estado
+        });
     }
 }
