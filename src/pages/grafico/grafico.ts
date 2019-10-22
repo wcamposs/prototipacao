@@ -10,7 +10,7 @@ import { Chart } from 'chart.js';
     templateUrl: 'grafico.html',
 })
 
-
+//exporta os dados para que possam ser visualizados na pag 'graficos.html'
 export class GraficoPage {
     @ViewChild('populacao_total') populacao_total;
     @ViewChild('populacao_homens') populacao_homens;
@@ -25,7 +25,7 @@ export class GraficoPage {
         this.estado = navParams.get('estado');
     }
 
-
+//Cria os graficos de linhas
     chart(labels: any, label: string, data: any, element: any) {
         console.log(data);
         new Chart(element, {
@@ -58,9 +58,10 @@ export class GraficoPage {
             },
         });
     }
-
+//Faz a requisição do json por estado selecionado
+//Os JSON chamados constam em assets/data/, junto com sua estrutura de siglas
     ionViewDidLoad() {
-        this.http.get('../assets/data/'+this.estado.sigla+'.json').subscribe(response =>
+        this.http.get('./assets/data/'+this.estado.sigla+'.json').subscribe(response =>
         {
             let labels = [];
             let populacao_total = [];

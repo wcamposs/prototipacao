@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -17,6 +17,7 @@ export class LoginPage {
 
   constructor(
     public navCtrl: NavController,
+    public alertCtrl: AlertController,
     private appauth: AngularFireAuth) {
   }
 
@@ -28,8 +29,12 @@ export class LoginPage {
       this.navCtrl.setRoot(TabsPage);
 
     }).catch(error => {
-      alert('usuario ou senha invalidos');
-      console.log('got an error', error);
+      const alert = this.alertCtrl.create({
+        title: 'Erro!',
+        subTitle: 'E-mail ou senha inválidos!',
+        buttons: ['OK']
+      });
+      alert.present();
     })
 
   }

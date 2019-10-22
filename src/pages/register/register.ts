@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoginPage } from '../login/login';
 import { user } from '../../models/user';
@@ -15,6 +15,7 @@ export class RegisterPage {
 
     constructor(
         public navCtrl: NavController,
+        public alertCtrl: AlertController,
         private appauth: AngularFireAuth) {
     }
 
@@ -23,8 +24,13 @@ export class RegisterPage {
             const result = await this.appauth.auth.createUserWithEmailAndPassword(user.email, user.password);
             console.log(result);
             this.navCtrl.push(LoginPage);
-        } catch (e) {
-            console.error(e);
+        } catch (error) {
+                const alert = this.alertCtrl.create({
+                  title: 'Erro!',
+                  subTitle: 'Seu login deve ser um email! \n \n Sua senha deve ter no mínimo 6 caracteres!',
+                  buttons: ['OK']
+                });
+                alert.present();
         }
     }
 }
