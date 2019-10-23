@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>projeto</name>
+    <name>Predictive</name>
     <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="williancampos1995@gmail.com" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -84,5 +84,5 @@
     <plugin name="cordova-plugin-advanced-http" spec="^1.11.1" />
     <allow-navigation href="http://192.168.0.240:8100" />
     <engine name="browser" spec="5.0.3" />
-    <engine name="android" spec="7.1.4" />
+    <engine name="android" spec="^7.1.4" />
 </widget>

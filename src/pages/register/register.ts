@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { LoginPage } from '../login/login';
+import { HomePage } from '../home/home';
 import { user } from '../../models/user';
 
 @IonicPage()
@@ -23,7 +23,7 @@ export class RegisterPage {
         try {
             const result = await this.appauth.auth.createUserWithEmailAndPassword(user.email, user.password);
             console.log(result);
-            this.navCtrl.push(LoginPage);
+            this.navCtrl.push(HomePage);
         } catch (error) {
                 const alert = this.alertCtrl.create({
                   title: 'Erro!',
