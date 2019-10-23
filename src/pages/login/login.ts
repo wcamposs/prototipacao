@@ -31,7 +31,7 @@ export class LoginPage {
     }).catch(error => {
       const alert = this.alertCtrl.create({
         title: 'Erro!',
-        subTitle: 'E-mail ou senha inválidos!',
+        subTitle: 'Credenciais inválidas!',
         buttons: ['OK']
       });
       alert.present();
